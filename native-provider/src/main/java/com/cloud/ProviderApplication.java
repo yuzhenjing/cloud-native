@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 /**
  * @author yzz
  */
-@EnableFeignClients
+@EnableFeignClients(basePackages ="com.cloud" )
 @SpringCloudApplication
 public class ProviderApplication {
 
