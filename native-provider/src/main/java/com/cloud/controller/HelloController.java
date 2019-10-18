@@ -20,9 +20,10 @@ public class HelloController {
     private HelloFacade helloFacade;
 
 
-    @RequestMapping("/hello/{name}")
-    public String hello(@PathVariable String name) {
+    @RequestMapping(value = {"/hello/{name}", "/hello"})
+    public String hello(@PathVariable(required = false) String name, String value) {
         log.info("名字是：{}", name);
+        System.out.println(value);
         return helloFacade.hello(name);
     }
 }

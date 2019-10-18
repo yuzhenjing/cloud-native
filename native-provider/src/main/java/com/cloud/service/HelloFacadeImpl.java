@@ -16,7 +16,13 @@ public class HelloFacadeImpl implements HelloFacade {
     @Override
     public String hello(String name) {
         log.info("--------------");
+        test();
         return "你好 " + name;
+    }
+
+
+    public void test() {
+        log.info("--------------");
     }
 
 
