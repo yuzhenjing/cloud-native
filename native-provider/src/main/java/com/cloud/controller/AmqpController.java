@@ -18,7 +18,7 @@ public class AmqpController {
 
     @RequestMapping("/send/{message}")
     public String sendMsg(@PathVariable String message) {
-        rabbitMessagingTemplate.convertAndSend("TestDirectExchange", "TestDirectRouting", message);
+        rabbitMessagingTemplate.convertAndSend("direct_exchange", "direct_routingKey", message);
         return message;
     }
 

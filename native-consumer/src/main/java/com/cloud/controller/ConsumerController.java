@@ -1,6 +1,5 @@
 package com.cloud.controller;
 
-import com.cloud.api.HelloFacade;
 import com.cloud.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
