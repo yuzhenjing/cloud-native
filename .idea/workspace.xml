@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da2bcc6c-eb04-4bc4-aefa-bfe4a712fb23" name="Default Changelist" comment="add sentinel">
-      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/controller/NacosController.java" afterDir="false" />
+    <list default="true" id="da2bcc6c-eb04-4bc4-aefa-bfe4a712fb23" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/annotation/CustomRequestBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/annotation/PreventRepetitionAnnotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/config/CustomHandlerMethodArgumentResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/config/CustomWebMvcConfigurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/config/PreventRepetitionAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/config/RedissonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/config/WebCorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/config/XssAndSqlHttpServletRequestWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/config/XssFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/config/XssStringJsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/controller/JetCacheController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/controller/LockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/entity/TbUrl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/lock/DistributedLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/mapper/TbUrlMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/service/JetCacheService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/service/TbUrlService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/util/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/native-provider/src/main/resources/mapper/TbUrlMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/native-consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native-consumer/src/main/java/com/cloud/ConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/native-consumer/src/main/java/com/cloud/ConsumerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native-consumer/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/native-consumer/src/main/resources/bootstrap.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/native-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/native-provider/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/ProviderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/ProviderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/service/ScheduledService.java" beforeDir="false" afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/service/ScheduledService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/native-provider/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/native-provider/src/main/resources/bootstrap.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +37,20 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -27,6 +63,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="dummy://restClient/response21.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -62,7 +101,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/native-consumer/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/native-provider/src/main/resources/mapper" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -76,11 +115,63 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yzz\IdeaProjects\cloud-native\native-provider\src\main\resources\mapper" />
+      <recent name="C:\Users\yzz\IdeaProjects\cloud-native\native-provider\src\main\java\com\cloud\mapper" />
+      <recent name="C:\Users\yzz\IdeaProjects\cloud-native\native-provider\src\main\java\com\cloud\domain" />
+      <recent name="C:\Users\yzz\IdeaProjects\cloud-native\native-provider\src\main\java\com\cloud\service" />
       <recent name="C:\Users\yzz\IdeaProjects\cloud-native\native-consumer\src\main\resources" />
-      <recent name="D:\workspace\cloud-native\native-provider" />
-      <recent name="D:\workspace\cloud-native\native-provider\src" />
-      <recent name="D:\workspace\cloud-native\native-provider\src\main" />
     </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8989" />
+          <option name="urlPath" value="/lock/add" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;longUrl&quot;:&quot;&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8989" />
+          <option name="urlPath" value="/lock/add" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ProviderApplication">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
@@ -101,6 +192,32 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
+    </configuration>
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cloud.util.CodeGenerator" />
+      <module name="native-provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cloud.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SshortUrlService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cloud.service.SshortUrlService" />
+      <module name="native-provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cloud.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="HelloControllerTest.hello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="native-provider" />
@@ -127,8 +244,10 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.ConsumerApplication" />
-      <option name="PROGRAM_PARAMETERS" value="server.port=8088" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="spring.cloud.nacos.config.server-addr" value="47.110.59.121:8848" />
+      </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,19 +261,27 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.ProviderApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="spring.cloud.nacos.config.server-addr" value="47.110.59.121:8848" />
+      </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.SshortUrlService" />
       <item itemvalue="JUnit.HelloControllerTest.hello" />
       <item itemvalue="Spring Boot.ConsumerApplication" />
       <item itemvalue="Spring Boot.ProviderApplication" />
+      <item itemvalue="Application.CodeGenerator" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ProviderApplication" />
+        <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="Spring Boot.ConsumerApplication" />
+        <item itemvalue="Application.SshortUrlService" />
         <item itemvalue="JUnit.HelloControllerTest.hello" />
       </list>
     </recent_temporary>
@@ -190,7 +317,10 @@
       <workItem from="1572349029116" duration="11325000" />
       <workItem from="1577104571728" duration="1033000" />
       <workItem from="1577278910982" duration="4695000" />
-      <workItem from="1577497787014" duration="20106000" />
+      <workItem from="1577497787014" duration="27409000" />
+      <workItem from="1577769252634" duration="4829000" />
+      <workItem from="1578403799471" duration="6850000" />
+      <workItem from="1578576883508" duration="27786000" />
     </task>
     <task id="LOCAL-00001" summary="add dubbo">
       <created>1571381903774</created>
@@ -213,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571388584329</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="添加演示">
+      <created>1577708990937</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577708990937</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,89 +372,110 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add dubbo" />
     <MESSAGE value="add sentinel" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sentinel" />
+    <MESSAGE value="添加演示" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加演示" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577786504437">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1577786504437" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1578742295916">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1578742295916" />
+    <state x="449" y="147" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578576437321">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="147" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1578576437321" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577503400735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577503400735" />
-    <state x="332" y="6" key="CommitChangelistDialog2" timestamp="1577519436155">
+    <state x="524" y="115" width="814" height="594" key="#xdebugger.evaluate" timestamp="1578752976914">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="332" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577519436155" />
-    <state width="429" height="466" key="DebuggerActiveHint" timestamp="1577519593665">
+    <state x="524" y="115" width="814" height="594" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1578752976914" />
+    <state x="332" y="6" key="CommitChangelistDialog2" timestamp="1577708989383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="429" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1577519593665" />
+    <state x="332" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577708989383" />
+    <state width="973" height="638" key="DebuggerActiveHint" timestamp="1578746587723">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="973" height="638" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1578746587723" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1577285075032">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1577285075032" />
-    <state width="1493" height="451" key="GridCell.Tab.0.bottom" timestamp="1577708548406">
+    <state width="1493" height="190" key="GridCell.Tab.0.bottom" timestamp="1578922522805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577708548406" />
-    <state width="1493" height="451" key="GridCell.Tab.0.center" timestamp="1577708548405">
+    <state width="1493" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578922522805" />
+    <state width="1493" height="190" key="GridCell.Tab.0.center" timestamp="1578922522805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577708548405" />
-    <state width="1493" height="451" key="GridCell.Tab.0.left" timestamp="1577708548405">
+    <state width="1493" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1578922522805" />
+    <state width="1493" height="190" key="GridCell.Tab.0.left" timestamp="1578922522805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577708548405" />
-    <state width="1493" height="451" key="GridCell.Tab.0.right" timestamp="1577708548406">
+    <state width="1493" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1578922522805" />
+    <state width="1493" height="190" key="GridCell.Tab.0.right" timestamp="1578922522805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577708548406" />
-    <state width="1493" height="451" key="GridCell.Tab.1.bottom" timestamp="1577708548408">
+    <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1578922522805" />
+    <state width="1493" height="190" key="GridCell.Tab.1.bottom" timestamp="1578922522561">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577708548408" />
-    <state width="1493" height="451" key="GridCell.Tab.1.center" timestamp="1577708548406">
+    <state width="1493" height="190" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578922522561" />
+    <state width="1493" height="190" key="GridCell.Tab.1.center" timestamp="1578922522561">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577708548406" />
-    <state width="1493" height="451" key="GridCell.Tab.1.left" timestamp="1577708548406">
+    <state width="1493" height="190" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1578922522561" />
+    <state width="1493" height="190" key="GridCell.Tab.1.left" timestamp="1578922522561">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577708548406" />
-    <state width="1493" height="451" key="GridCell.Tab.1.right" timestamp="1577708548407">
+    <state width="1493" height="190" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1578922522561" />
+    <state width="1493" height="190" key="GridCell.Tab.1.right" timestamp="1578922522561">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577708548407" />
-    <state width="1493" height="150" key="GridCell.Tab.2.bottom" timestamp="1577520973983">
+    <state width="1493" height="190" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1578922522561" />
+    <state width="1493" height="190" key="GridCell.Tab.2.bottom" timestamp="1578922522562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577520973983" />
-    <state width="1493" height="150" key="GridCell.Tab.2.center" timestamp="1577520973983">
+    <state width="1493" height="190" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578922522562" />
+    <state width="1493" height="190" key="GridCell.Tab.2.center" timestamp="1578922522562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1577520973983" />
-    <state width="1493" height="150" key="GridCell.Tab.2.left" timestamp="1577520973983">
+    <state width="1493" height="190" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1578922522562" />
+    <state width="1493" height="190" key="GridCell.Tab.2.left" timestamp="1578922522562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1577520973983" />
-    <state width="1493" height="150" key="GridCell.Tab.2.right" timestamp="1577520973983">
+    <state width="1493" height="190" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1578922522562" />
+    <state width="1493" height="190" key="GridCell.Tab.2.right" timestamp="1578922522562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1577520973983" />
+    <state width="1493" height="190" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1578922522562" />
     <state x="270" y="54" key="SettingsEditor" timestamp="1577105271794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577105271794" />
-    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577708651562">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1577708994989">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1577708651562" />
-    <state x="447" y="150" width="642" height="524" key="find.popup" timestamp="1577519476836">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577708994989" />
+    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578922743250">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="447" y="150" width="642" height="524" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1577519476836" />
-    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1577520806254">
+    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1578922743250" />
+    <state x="447" y="150" width="782" height="600" key="find.popup" timestamp="1578743219966">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1577520806254" />
+    <state x="447" y="150" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1578743219966" />
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1578742265087">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1578742265087" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -326,6 +484,11 @@
           <url>file://$PROJECT_DIR$/native-provider/test/java/com/cloud/controller/HelloControllerTest.java</url>
           <line>32</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/native-provider/src/main/java/com/cloud/config/CustomHandlerMethodArgumentResolver.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

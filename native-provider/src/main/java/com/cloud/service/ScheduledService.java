@@ -12,7 +12,7 @@ import org.springframework.scheduling.support.CronTrigger;
 import java.time.LocalDateTime;
 
 @Slf4j
-@Configuration
+//@Configuration
 @EnableScheduling
 public class ScheduledService implements SchedulingConfigurer {
 
