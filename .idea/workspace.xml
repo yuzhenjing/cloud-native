@@ -26,16 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da2bcc6c-eb04-4bc4-aefa-bfe4a712fb23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/native-mq/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/native-mq/rabbitmq/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/native-mq/rabbitmq/src/main/java/com/cloud/consumer/DirectConsumerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/native-mq/rabbitmq/src/main/java/com/cloud/producter/DirectProducterDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/service/JetCacheService.java" beforeDir="false" afterPath="$PROJECT_DIR$/native-provider/src/main/java/com/cloud/service/JetCacheService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/native-provider/test/java/com/cloud/controller/HelloControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/native-provider/test/java/com/cloud/controller/HelloControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native-mq/rabbitmq/src/main/java/com/cloud/consumer/DirectConsumerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/native-mq/rabbitmq/src/main/java/com/cloud/consumer/DirectConsumerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native-mq/rabbitmq/src/main/java/com/cloud/consumer/DirectConsumerDemo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/native-mq/rabbitmq/src/main/java/com/cloud/consumer/DirectConsumerDemo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native-mq/rabbitmq/src/main/java/com/cloud/producter/DirectProducterDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/native-mq/rabbitmq/src/main/java/com/cloud/producter/DirectProducterDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native-mq/rabbitmq/src/main/java/com/cloud/producter/FanoutProducterDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/native-mq/rabbitmq/src/main/java/com/cloud/producter/FanoutProducterDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,11 +110,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.cloud.controller" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\yzz\IdeaProjects\cloud-native\native-mq" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cloud.producter" />
+      <recent name="com.cloud.consumer" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\yzz\IdeaProjects\cloud-native\native-provider\src\main\resources\mapper" />
@@ -127,6 +120,12 @@
       <recent name="C:\Users\yzz\IdeaProjects\cloud-native\native-provider\src\main\java\com\cloud\domain" />
       <recent name="C:\Users\yzz\IdeaProjects\cloud-native\native-provider\src\main\java\com\cloud\service" />
       <recent name="C:\Users\yzz\IdeaProjects\cloud-native\native-consumer\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yzz\IdeaProjects\cloud-native\native-mq" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -180,7 +179,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DirectProducterDemo">
+  <component name="RunManager" selected="Application.FanoutProducterDemo">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="cloud-native" />
       <working_directory value="$PROJECT_DIR$" />
@@ -200,12 +199,12 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cloud.util.CodeGenerator" />
-      <module name="native-provider" />
+    <configuration name="DirectConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cloud.consumer.DirectConsumerDemo" />
+      <module name="rabbitmq" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cloud.util.*" />
+          <option name="PATTERN" value="com.cloud.consumer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -213,8 +212,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DirectConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cloud.consumer.DirectConsumerDemo" />
+    <configuration name="DirectConsumerDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cloud.consumer.DirectConsumerDemo2" />
       <module name="rabbitmq" />
       <extension name="coverage">
         <pattern>
@@ -239,6 +238,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FanoutProducterDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cloud.producter.FanoutProducterDemo" />
+      <module name="rabbitmq" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cloud.producter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cloud.util.TestUtil" />
       <module name="native-provider" />
@@ -252,37 +264,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="native-provider" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cloud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.ProviderApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <envs>
-        <env name="spring.cloud.nacos.config.server-addr" value="47.110.59.121:8848" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.CodeGenerator" />
       <item itemvalue="Application.TestUtil" />
-      <item itemvalue="Spring Boot.ProviderApplication" />
       <item itemvalue="Application.DirectProducterDemo" />
       <item itemvalue="Application.DirectConsumerDemo" />
+      <item itemvalue="Application.DirectConsumerDemo2" />
+      <item itemvalue="Application.FanoutProducterDemo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DirectProducterDemo" />
+        <item itemvalue="Application.FanoutProducterDemo" />
+        <item itemvalue="Application.DirectConsumerDemo2" />
         <item itemvalue="Application.DirectConsumerDemo" />
+        <item itemvalue="Application.DirectProducterDemo" />
         <item itemvalue="Application.TestUtil" />
-        <item itemvalue="Spring Boot.ProviderApplication" />
-        <item itemvalue="Application.CodeGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +308,10 @@
       <workItem from="1582247322150" duration="98000" />
       <workItem from="1582248334686" duration="1380000" />
       <workItem from="1582284474632" duration="3286000" />
-      <workItem from="1583847917457" duration="3385000" />
+      <workItem from="1583847917457" duration="3849000" />
+      <workItem from="1584107565490" duration="117000" />
+      <workItem from="1584109095325" duration="1563000" />
+      <workItem from="1584190035495" duration="392000" />
     </task>
     <task id="LOCAL-00001" summary="add dubbo">
       <created>1571381903774</created>
@@ -350,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578922803829</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加演示">
+      <created>1583851438618</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583851438618</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,10 +416,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="524" y="115" width="814" height="594" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1578752976914" />
-    <state x="332" y="6" key="CommitChangelistDialog2" timestamp="1578922801749">
+    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1583851436983">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="332" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578922801749" />
+    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583851436983" />
     <state width="973" height="638" key="DebuggerActiveHint" timestamp="1578746587723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -423,38 +428,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1577285075032" />
-    <state width="1493" height="317" key="GridCell.Tab.0.bottom" timestamp="1583851288700">
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom" timestamp="1584109889669">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="317" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583851288700" />
-    <state width="1493" height="317" key="GridCell.Tab.0.center" timestamp="1583851288698">
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584109889669" />
+    <state width="1493" height="205" key="GridCell.Tab.0.center" timestamp="1584109889669">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="317" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583851288698" />
-    <state width="1493" height="317" key="GridCell.Tab.0.left" timestamp="1583851288697">
+    <state width="1493" height="205" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584109889669" />
+    <state width="1493" height="205" key="GridCell.Tab.0.left" timestamp="1584109889669">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="317" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583851288697" />
-    <state width="1493" height="317" key="GridCell.Tab.0.right" timestamp="1583851288699">
+    <state width="1493" height="205" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584109889669" />
+    <state width="1493" height="205" key="GridCell.Tab.0.right" timestamp="1584109889669">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="317" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583851288699" />
-    <state width="1493" height="321" key="GridCell.Tab.1.bottom" timestamp="1583849956612">
+    <state width="1493" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584109889669" />
+    <state width="1493" height="199" key="GridCell.Tab.1.bottom" timestamp="1584109394140">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="321" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583849956612" />
-    <state width="1493" height="321" key="GridCell.Tab.1.center" timestamp="1583849956612">
+    <state width="1493" height="199" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584109394140" />
+    <state width="1493" height="199" key="GridCell.Tab.1.center" timestamp="1584109394139">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="321" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583849956612" />
-    <state width="1493" height="321" key="GridCell.Tab.1.left" timestamp="1583849956612">
+    <state width="1493" height="199" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584109394139" />
+    <state width="1493" height="199" key="GridCell.Tab.1.left" timestamp="1584109394138">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="321" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583849956612" />
-    <state width="1493" height="321" key="GridCell.Tab.1.right" timestamp="1583849956612">
+    <state width="1493" height="199" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584109394138" />
+    <state width="1493" height="199" key="GridCell.Tab.1.right" timestamp="1584109394140">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="321" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583849956612" />
+    <state width="1493" height="199" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584109394140" />
     <state width="1493" height="482" key="GridCell.Tab.2.bottom" timestamp="1579401611056">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -479,14 +484,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577105271794" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1578922807791">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1583851443662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578922807791" />
-    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578922743250">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583851443662" />
+    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583851411484">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1578922743250" />
+    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1583851411484" />
     <state x="447" y="150" width="782" height="600" key="find.popup" timestamp="1578743219966">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -1,6 +1,5 @@
 package com.cloud.producter;
 
-import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -50,7 +49,7 @@ public class DirectProducterDemo {
 
                 //channel.txSelect(); // 声明事务
 
-                channel.basicPublish("", "test_queue", null, ("第【" + i + "】号消息").getBytes());
+                channel.basicPublish("", "test_queue", null, (System.currentTimeMillis() + "第【" + i + "】号消息").getBytes());
                 Thread.sleep(1000);
 //                channel.txCommit(); 提交事务
 //                channel.txRollback(); 回滚事务

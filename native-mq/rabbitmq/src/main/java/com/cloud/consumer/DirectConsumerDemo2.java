@@ -5,7 +5,7 @@ import com.rabbitmq.client.*;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
-public class DirectConsumerDemo {
+public class DirectConsumerDemo2 {
 
 
     public static void main(String[] args) {
@@ -60,7 +60,7 @@ public class DirectConsumerDemo {
 
                     @Override
                     public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
-                        System.out.println("收到消息：" + new String(body));
+                        System.out.println("Consumer2-收到消息：" + new String(body));
                     }
                 });
             }
