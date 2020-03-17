@@ -26,6 +26,7 @@
         <module>native-consumer</module>
         <module>native-api</module>
         <module>native-mq</module>
+        <module>native-redis</module>
     </modules>
     <dependencies>
         <dependency>
