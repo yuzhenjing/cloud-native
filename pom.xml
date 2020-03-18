@@ -27,6 +27,7 @@
         <module>native-api</module>
         <module>native-mq</module>
         <module>native-redis</module>
+        <module>native-elastic</module>
     </modules>
     <dependencies>
         <dependency>
