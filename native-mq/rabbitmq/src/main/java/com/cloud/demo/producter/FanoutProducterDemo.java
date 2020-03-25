@@ -1,13 +1,12 @@
-package com.cloud.producter;
+package com.cloud.demo.producter;
 
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
+import com.google.common.collect.Maps;
+import com.rabbitmq.client.*;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
-public class DirectProducterDemo {
+public class FanoutProducterDemo {
 
 
     public static final String EXCHANGE = "test_exchange";
@@ -42,14 +41,20 @@ public class DirectProducterDemo {
              */
             channel.queueDeclare("test_queue", false, false, false, null);
 
-//            channel.exchangeDeclare(EXCHANGE, BuiltinExchangeType.DIRECT);
+            channel.exchangeDeclare(EXCHANGE, BuiltinExchangeType.FANOUT);
+
+            channel.queueBind("test_queue", EXCHANGE, "key_01");
 
 
             for (int i = 0; i < 10000L; i++) {
 
                 //channel.txSelect(); // 声明事务
-
-                channel.basicPublish("", "test_queue", null, (System.currentTimeMillis() + "第【" + i + "】号消息").getBytes());
+                AMQP.BasicProperties properties = new AMQP.BasicProperties.Builder()
+                        //设置消息持久化 rabbit mq 重启后依然存在该消息
+                        .deliveryMode(2)
+                        .headers(Maps.newConcurrentMap())
+                        .build();
+                channel.basicPublish(EXCHANGE, "ley_01", properties, (System.currentTimeMillis() + "第【" + i + "】号消息").getBytes());
                 Thread.sleep(1000);
 //                channel.txCommit(); 提交事务
 //                channel.txRollback(); 回滚事务
