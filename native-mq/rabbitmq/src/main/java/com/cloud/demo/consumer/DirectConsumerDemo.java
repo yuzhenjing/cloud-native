@@ -1,4 +1,4 @@
-package com.cloud.consumer;
+package com.cloud.demo.consumer;
 
 import com.rabbitmq.client.*;
 
