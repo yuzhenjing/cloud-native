@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class HelloService {
 
 
-    @Reference
+    @Reference(check = false)
     private HelloFacade helloFacade;
 
     public String test(String name) {

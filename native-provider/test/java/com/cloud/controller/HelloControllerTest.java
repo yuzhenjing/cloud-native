@@ -1,5 +1,6 @@
 package com.cloud.controller;
 
+import com.cloud.ProviderApplication;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

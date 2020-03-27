@@ -28,5 +28,21 @@ public class RabbitmqQueueConfig {
         return BindingBuilder.bind(directQueue()).to(directExchange()).with("direct_routingKey");
     }
 
+    @Bean
+    public Queue fountQueue() {
+        return new Queue("order_queue");
+    }
+
+    @Bean
+    public DirectExchange fountExchange() {
+        return new DirectExchange("order_exchange");
+    }
+
+    @Bean
+    public Binding fountBinding() {
+        return BindingBuilder.bind(directQueue()).to(directExchange()).with("order_key");
+    }
+
+
 
 }
