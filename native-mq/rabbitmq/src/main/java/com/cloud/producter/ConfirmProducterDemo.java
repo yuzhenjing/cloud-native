@@ -20,7 +20,7 @@ public class ConfirmProducterDemo {
         factory.setPort(5672);
         factory.setUsername("guest");
         factory.setPassword("guest");
-        factory.setVirtualHost("/");
+        factory.setVirtualHost("cloud-native");
         try {
             @Cleanup Connection connection = factory.newConnection();
             @Cleanup Channel channel = connection.createChannel();
@@ -30,7 +30,7 @@ public class ConfirmProducterDemo {
 
             String msg = "hello Rabbit MQ send confirm message !";
 
-            channel.basicPublish("test_exchange", "key_11", true, null, msg.getBytes());
+            channel.basicPublish("order_exchange", "order_key", true, null, msg.getBytes());
 
             channel.addConfirmListener(new ConfirmListener() {
                 @Override
