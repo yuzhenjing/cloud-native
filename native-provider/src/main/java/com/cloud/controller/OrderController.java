@@ -36,19 +36,12 @@ public class OrderController {
         RabbitOrder order = orderService.getById(1);
 
         log.info("消息发送时间是：{}", LocalDateTime.now().toString());
-        rabbitTemplate.convertAndSend("delayedExchange", "delayed", JSON.toJSONString(order), new MessagePostProcessor() {
-            @Override
-            public Message postProcessMessage(Message message) throws AmqpException {
-                message.getMessageProperties().setHeader("x-delay", 3000);
-                return message;
-            }
+        rabbitTemplate.convertAndSend("delayedExchange", "delayed", JSON.toJSONString(order), message -> {
+            message.getMessageProperties().setHeader("x-delay", 3000);
+            return message;
         });
-
-
         boolean annotationPresent = this.getClass().isAnnotationPresent(Component.class);
         System.out.println(annotationPresent);
-
-
         return "消息发送成";
     }
 
