@@ -1,6 +1,9 @@
 package com.cloud.config;
 
-import org.springframework.amqp.core.*;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,9 +23,9 @@ public class DelayedMqConfig {
     @Bean
     public Queue delay_queue() {
         HashMap<String, Object> map = new HashMap<>();
-        map.put("x-message-ttl", 1200000);
+        map.put("x-message-ttl", 30 * 1000);
         map.put("x-dead-letter-exchange", "trade_exchange");
-        map.put("x-dead-letter-routing-key", "trade_delay_key_2m");
+        map.put("x-dead-letter-routing-key", "trade_key");
         return new Queue("delay_queue", true, false, false, map);
     }
 
@@ -39,7 +42,7 @@ public class DelayedMqConfig {
     public Queue delay_message() {
         HashMap<String, Object> map = new HashMap<>();
         map.put("x-dead-letter-exchange", "trade_exchange");
-        map.put("x-dead-letter-routing-key", "trade_delay_key_3m");
+        map.put("x-dead-letter-routing-key", "trade_key");
         return new Queue("delay_message", true, false, false, map);
     }
 
@@ -52,12 +55,12 @@ public class DelayedMqConfig {
 
     @Bean
     public Binding delay_queue_binding() {
-        return BindingBuilder.bind(delay_queue()).to(trade_direct_delay()).with("trade_delay_key");
+        return BindingBuilder.bind(delay_queue()).to(trade_direct_delay()).with("trade_delay_key_2m");
     }
 
     @Bean
     public Binding delay_message_binding() {
-        return BindingBuilder.bind(delay_message()).to(trade_direct_delay()).with("trade_delay_key");
+        return BindingBuilder.bind(delay_message()).to(trade_direct_delay()).with("trade_delay_key_3m");
     }
 
 
@@ -75,6 +78,4 @@ public class DelayedMqConfig {
     public Binding trade_binding() {
         return BindingBuilder.bind(trade_queue()).to(trade_exchange()).with("trade_key");
     }
-
-
 }

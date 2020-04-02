@@ -1,6 +1,5 @@
 package com.cloud.kxlist.brand;
 
-import com.cloud.kxlist.brand.BrandContent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

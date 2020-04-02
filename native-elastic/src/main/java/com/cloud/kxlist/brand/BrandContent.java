@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 /**
  * @author yzj
@@ -19,11 +21,13 @@ public class BrandContent {
     private String lastModifiedBy;
     private long lastModifiedDate;
     private String brandName;
+    @Field(type = FieldType.Text, analyzer = "english")
     private String brandNameEN;
     private String brandNameOther;
     private String brandLogo;
     private String location;
     private String homePage;
+    @Field(type = FieldType.Text, analyzer = "ik_smart")
     private String brandAbout;
     private String brandPoster;
     private String categoryIDs;

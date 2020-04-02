@@ -32,9 +32,12 @@ public class KxService {
 
     public String initKxBrand() {
 
-        KxDataVO dataVO = restTemplate.getForObject("https://www.kxlist.com/api/brand/search/page", KxDataVO.class, new Object());
+        JSONObject dataVO = restTemplate.getForObject("https://www.kxlist.com/api/brand/search/page", JSONObject.class, new Object());
 
-        brandRepository.saveAll(dataVO.getData().getContent());
+        JSONObject data = dataVO.getJSONObject("data");
+        JSONArray content = data.getJSONArray("content");
+        List<BrandContent> brandContents = JSON.parseArray(content.toJSONString(), BrandContent.class);
+        brandRepository.saveAll(brandContents);
 
         return "初始化成功";
     }

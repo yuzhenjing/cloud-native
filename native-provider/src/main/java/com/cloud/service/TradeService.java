@@ -27,17 +27,15 @@ public class TradeService {
     public String sendDelayQueue(Integer id) {
 
         RabbitOrder order = orderService.getById(id);
-        rabbitTemplate.setMandatory(true);
         rabbitTemplate.setConfirmCallback(confirmCallback);
         rabbitTemplate.setReturnCallback(returnCallback);
-
+        rabbitTemplate.setMandatory(true);
         MessageProperties properties = new MessageProperties();
         Message message = new Message(JSON.toJSONString(order).getBytes(), properties);
-        //id + 时间戳 全局唯一 做补偿策略的时候，必须保证这是全局唯一的消息
         CorrelationData correlationData = new CorrelationData(UUID.randomUUID().toString());
         correlationData.setReturnedMessage(message);
         if (id % 2 == 0) {
-            properties.setExpiration((3 * 60 * 1000) + "");
+            properties.setExpiration((60 * 1000) + "");
             rabbitTemplate.convertAndSend("trade_direct_delay", "trade_delay_key_3m", message, correlationData);
         } else {
             rabbitTemplate.convertAndSend("trade_direct_delay", "trade_delay_key_2m", message, correlationData);
@@ -53,7 +51,10 @@ public class TradeService {
         if (ack) {
             log.info("id={},消息投递{}", correlationData.getId(), "成功");
         } else {
-            log.info("id={},消息投递{},消息体是：{}", correlationData.getId(), "失败", JSON.toJSONString(correlationData.getReturnedMessage()));
+            //消息投递失败 做补偿策略 保证最终一致性
+            Message confirmMsg = correlationData.getReturnedMessage();
+            assert confirmMsg != null;
+            log.info("id={},消息投递{},消息体是：{}", correlationData.getId(), "失败", new String(confirmMsg.getBody()));
         }
     };
 
@@ -61,12 +62,12 @@ public class TradeService {
      * 回调函数: return返回
      */
     final RabbitTemplate.ReturnCallback returnCallback = (message, replyCode, replyText, exchange, routingKey) -> {
-
         //发送回调  处理
-        log.info("消息内容是{}", message);
-
-        System.err.println("return exchange: " + exchange + ", routingKey: "
-                + routingKey + ", replyCode: " + replyCode + ", replyText: " + replyText);
+        log.info("消息内容是{}", new String(message.getBody()));
+        log.info("replyCode{}", replyCode);
+        log.info("replyText{}", replyText);
+        log.info("exchange{}", exchange);
+        log.info("routingKey{}", routingKey);
     };
 
 }

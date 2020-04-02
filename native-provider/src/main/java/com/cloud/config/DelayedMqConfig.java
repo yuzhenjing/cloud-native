@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.HashMap;
 
-@Configuration
+//@Configuration
 public class DelayedMqConfig {
 
 
@@ -23,10 +23,10 @@ public class DelayedMqConfig {
     @Bean
     public Queue delay_queue() {
         HashMap<String, Object> map = new HashMap<>();
-        map.put("x-message-ttl",2 * 60 * 1000);
+        map.put("x-message-ttl",30 * 1000);
         map.put("x-dead-letter-exchange", "trade_exchange");
         map.put("x-dead-letter-routing-key", "trade_delay_key_2m");
-        return new Queue("delay_queue", true, false, false, map);
+        return new Queue("delay_queue2", true, false, false, map);
     }
 
     /**
@@ -43,7 +43,7 @@ public class DelayedMqConfig {
         HashMap<String, Object> map = new HashMap<>();
         map.put("x-dead-letter-exchange", "trade_exchange");
         map.put("x-dead-letter-routing-key", "trade_delay_key_3m");
-        return new Queue("delay_message", true, false, false, map);
+        return new Queue("delay_message2", true, false, false, map);
     }
 
 
